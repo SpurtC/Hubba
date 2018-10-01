@@ -9,7 +9,6 @@ public class Habit extends Observable {
     private String title;
     private String timestamp;
     private int streak;
-    private Streak streakObject;
     private int goalDays;
     private Frequency frequency;
     private boolean isDone;
@@ -48,8 +47,6 @@ public class Habit extends Observable {
     public void upStreak(Habit habit){
         if(habit.isDone){
             habit.streak++;
-        }if(habit.streak == 3){
-            habit.streakObject = new Streak(this);
         }
     }
 
@@ -74,7 +71,5 @@ public class Habit extends Observable {
     }
 
     public State getSTATE (){return STATE;}
-
-    public Streak getStreakObject(Habit habit) { return habit.streakObject;}
 
 }

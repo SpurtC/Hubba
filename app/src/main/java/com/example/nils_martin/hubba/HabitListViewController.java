@@ -13,14 +13,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class Streak extends AppCompatActivity{
+import java.util.List;
 
-    private String days;
-    private ImageView streakImage;
-    private String pathToImage = "C:\\Users\\User\\Documents\\GitHub\\Hubba\\app\\src\\main\\res\\drawable\\fire.jpg";
+public class HabitListViewController extends AppCompatActivity{
 
-    private TextView textTitle;
-    private TextView textDays;
+    private List<Habit> habits;
+    private ImageView fire;
 
     @Override
     protected void onCreate(Bundle savedInstance){
@@ -28,9 +26,9 @@ public class Streak extends AppCompatActivity{
         setContentView(R.layout.habit_list_view);
     }
 
-    public Streak(Habit habit){
-        this.days = String.valueOf(habit.getStreak(habit));
+    public HabitListViewController(User user){
+        habits = user.getHabits();
+        ImageView
     }
-    
 
 }
